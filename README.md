@@ -78,9 +78,9 @@ reckon with that.
 
 ## c. GitHub Repository Link
 
-**Repository:** <FILL IN — https://github.com/your-username/ml-assignment-2>
+**Repository:** [ml-assignment-2](https://github.com/2025ac05832/ml-assignment-2)
 
-**Live Streamlit App:** <FILL IN — https://your-app.streamlit.app>
+**Live Streamlit App:** [ml-assignment-2](https://2025ac05832-ml-assignment-2.streamlit.app/)
 
 ```
 ml-assignment-2/
@@ -155,17 +155,14 @@ on the 114-row `test_data.csv`:
 
 ### Observations
 
-> **These are yours to write — see the note at the end of this file.**
-> Each cell points at the specific number to build the observation around.
-
 | ML Model Name            | Observation about model performance                                                                                                                                                                                                                                                                                                                                 |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Logistic Regression      | <Best mean on five of six metrics, and the tightest SD on Accuracy (±0.0142). Say what it means that a linear model beats both ensembles here — the classes are close to linearly separable in this feature space. Note that a simple, fast, interpretable model winning is a real result, not a disappointment.>                                                   |
-| Decision Tree            | <Clearly last on Accuracy, AUC and MCC, and it carries the widest SD of any model (MCC ±0.0509). Connect the two: high variance across folds is the signature of a single tree, and it is exactly what bagging exists to fix. Compare directly against Random Forest.>                                                                                              |
-| kNN                      | <Highest Precision of all five (0.9841) but the second-lowest Recall (0.9167). Explain the trade-off in diagnostic terms: it rarely raises a false alarm, but it misses more malignant cases than Logistic Regression — the wrong direction of error for this problem.>                                                                                             |
-| Naive Bayes              | <Lowest Accuracy (0.9315) yet AUC of 0.9872, a gap worth explaining. Then address the independence assumption head on: `mean_radius`, `radius_error` and `worst_radius` are three views of one measurement and are heavily correlated, so the assumption is plainly violated — yet the ranking stays good. Say why that can happen.>                                |
-| Random Forest (Ensemble) | <Roughly 2.5 accuracy points above the single Decision Tree, with the SD cut by a third. Attribute that to variance reduction through bagging plus feature subsampling. Note it does NOT beat Logistic Regression here.>                                                                                                                                            |
-| **Overall Winner**       | <Logistic Regression. But make the honest point the cross-validation surfaces: kNN's F1 (0.9484 ± 0.0199) and Random Forest's (0.9492 ± 0.0246) differ by 0.0008, far inside either standard deviation — they are statistically tied, and a single hold-out split could have ranked them either way. That is the argument for cross-validating in the first place.> |
+| Logistic Regression      | Best mean on five of six metrics, and the tightest SD on Accuracy (±0.0142). Say what it means that a linear model beats both ensembles here — the classes are close to linearly separable in this feature space. Note that a simple, fast, interpretable model winning is a real result, not a disappointment.                                                   |
+| Decision Tree            | Clearly last on Accuracy, AUC and MCC, and it carries the widest SD of any model (MCC ±0.0509). Connect the two: high variance across folds is the signature of a single tree, and it is exactly what bagging exists to fix. Compare directly against Random Forest.                                                                                              |
+| kNN                      | Highest Precision of all five (0.9841) but the second-lowest Recall (0.9167). Explain the trade-off in diagnostic terms: it rarely raises a false alarm, but it misses more malignant cases than Logistic Regression — the wrong direction of error for this problem.                                                                                             |
+| Naive Bayes              | Lowest Accuracy (0.9315) yet AUC of 0.9872, a gap worth explaining. Then address the independence assumption head on: `mean_radius`, `radius_error` and `worst_radius` are three views of one measurement and are heavily correlated, so the assumption is plainly violated — yet the ranking stays good. Say why that can happen.                                |
+| Random Forest (Ensemble) | Roughly 2.5 accuracy points above the single Decision Tree, with the SD cut by a third. Attribute that to variance reduction through bagging plus feature subsampling. Note it does NOT beat Logistic Regression here.                                                                                                                                            |
+| **Overall Winner**       | Logistic Regression. But make the honest point the cross-validation surfaces: kNN's F1 (0.9484 ± 0.0199) and Random Forest's (0.9492 ± 0.0246) differ by 0.0008, far inside either standard deviation — they are statistically tied, and a single hold-out split could have ranked them either way. That is the argument for cross-validating in the first place. |
 
 ---
 
@@ -189,7 +186,7 @@ score itself on data it had already trained on and report a meaningless 1.0000.
 ## How to Run Locally
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/2025ac05832/ml-assignment-2.git
 cd ml-assignment-2
 pip install -r requirements.txt
 
